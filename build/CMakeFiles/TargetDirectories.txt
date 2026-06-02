@@ -1,0 +1,5 @@
+/home/riccardo/c++_server/build/CMakeFiles/server.dir
+/home/riccardo/c++_server/build/CMakeFiles/client.dir
+/home/riccardo/c++_server/build/CMakeFiles/thread.dir
+/home/riccardo/c++_server/build/CMakeFiles/edit_cache.dir
+/home/riccardo/c++_server/build/CMakeFiles/rebuild_cache.dir
