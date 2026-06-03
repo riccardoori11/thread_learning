@@ -1,44 +1,34 @@
 #include <iostream>
-#include <thread>
 #include <atomic>
+#include<thread>
 
+static int cpt{0};
 
-class MyClass{
+static std::atomic<int> counter = std::atomic<int>{0};
+
+void myfunction(){
 		
-		public:
-				static std::atomic<int> counter;
-
-
-
-};
-
-std::atomic<int> MyClass::counter{0};
-
-void mythread(std::string a){
-
-				
-		for (int i = 0; i < 1000000; i++){
-				++MyClass::counter;
+		
+		for (int i = 0; i < 1000000;++i){
+				++cpt;
+				++counter;
 		}
-		
-		std::cout << "Done" << std::endl;	
-		
-}
+	}
+
+
 
 int main(){
 
+
+			
+		std::thread t1(myfunction);
+		std::thread t2(myfunction);
+
+		t1.join();
+		t2.join();
 		
-
-		std::cout<< "main: begin  counter =  " << MyClass::counter << "\n" <<std::endl;
-
-		std::thread p1(mythread,"Hello");
-		std::thread p2(mythread,"World!");
-
-		p1.join();
-		p2.join();
-
-		std::cout << "main: end counter = " << MyClass::counter << "\n" << std::endl;
-		
-
+		std::cout << "Main done with cpt = " << cpt << "\n";
+		std::cout << "Main done with cpt = " << counter << "\n";
+			
 		return 0;
 }
