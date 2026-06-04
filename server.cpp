@@ -16,7 +16,7 @@ namespace fs = std::filesystem;
 
 int main(){
 		std::vector<int> clients;
-		std::string path = "/home/riccardo/c++_server";
+		std::string path = fs::current_path();
 		int server_socket = socket(AF_INET, SOCK_STREAM,0);
 		sockaddr_in server;
 		server.sin_family = AF_INET;
