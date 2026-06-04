@@ -115,6 +115,7 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/bits/fs_fwd.h \
   /usr/include/c++/15/bits/fs_ops.h \
   /usr/include/c++/15/bits/fs_path.h \
+  /usr/include/c++/15/bits/fstream.tcc \
   /usr/include/c++/15/bits/functexcept.h \
   /usr/include/c++/15/bits/functional_hash.h \
   /usr/include/c++/15/bits/hash_bytes.h \
@@ -193,6 +194,7 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/ext/string_conversions.h \
   /usr/include/c++/15/ext/type_traits.h \
   /usr/include/c++/15/filesystem \
+  /usr/include/c++/15/fstream \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/iomanip \
   /usr/include/c++/15/ios \
@@ -216,8 +218,10 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/typeinfo \
   /usr/include/c++/15/vector \
   /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++locale.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/ctype_base.h \
@@ -312,6 +316,12 @@ server: /lib64/ld-linux-x86-64.so.2 \
 
 /usr/include/sys/types.h:
 
+/usr/include/sys/time.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/sys/select.h:
+
 /usr/include/c++/15/bits/locale_facets.tcc:
 
 /usr/include/c++/15/bits/locale_conv.h:
@@ -405,8 +415,6 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/types/__fpos_t.h:
-
-/usr/include/c++/15/bits/locale_facets_nonio.tcc:
 
 /usr/include/c++/15/bits/invoke.h:
 
@@ -504,9 +512,13 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/type_traits:
 
+/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
+
 /usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
 
 /usr/include/asm-generic/int-ll64.h:
+
+/usr/include/c++/15/bits/fstream.tcc:
 
 /usr/include/c++/15/bits/memoryfwd.h:
 
@@ -544,6 +556,8 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/bits/basic_ios.tcc:
 
+/usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h:
+
 /usr/include/bits/types/struct_osockaddr.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
@@ -557,6 +571,10 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/bits/types/timer_t.h:
 
 /usr/include/c++/15/bits/exception_defines.h:
+
+/usr/include/sys/single_threaded.h:
+
+/usr/include/c++/15/bits/predefined_ops.h:
 
 /usr/include/bits/select.h:
 
@@ -614,6 +632,8 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h:
 
+/usr/include/c++/15/bits/locale_facets_nonio.tcc:
+
 /usr/include/c++/15/bits/memory_resource.h:
 
 /usr/include/linux/sched/types.h:
@@ -629,6 +649,8 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/c++/15/bits/uses_allocator.h:
 
 /usr/include/c++/15/bits/ostream.h:
+
+/usr/include/c++/15/fstream:
 
 /usr/include/c++/15/bits/ostream.tcc:
 
@@ -716,8 +738,6 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/ext/aligned_buffer.h:
 
-/usr/include/sys/time.h:
-
 /usr/include/c++/15/ext/alloc_traits.h:
 
 /usr/include/linux/types.h:
@@ -786,8 +806,6 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/sys/socket.h:
-
 /usr/include/c++/15/x86_64-redhat-linux/bits/messages_members.h:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/time_members.h:
@@ -843,9 +861,3 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/c++/15/ostream:
 
 /usr/include/strings.h:
-
-/usr/include/sys/select.h:
-
-/usr/include/c++/15/bits/predefined_ops.h:
-
-/usr/include/sys/single_threaded.h:

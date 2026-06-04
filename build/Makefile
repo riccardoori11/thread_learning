@@ -162,6 +162,19 @@ thread/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/build
 .PHONY : thread/fast
 
+#=============================================================================
+# Target rules for targets named open
+
+# Build rule for target.
+open: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 open
+.PHONY : open
+
+# fast build rule for target.
+open/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/open.dir/build.make CMakeFiles/open.dir/build
+.PHONY : open/fast
+
 client.o: client.cpp.o
 .PHONY : client.o
 
@@ -185,6 +198,30 @@ client.s: client.cpp.s
 client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.s
 .PHONY : client.cpp.s
+
+open.o: open.cpp.o
+.PHONY : open.o
+
+# target to build an object file
+open.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/open.dir/build.make CMakeFiles/open.dir/open.cpp.o
+.PHONY : open.cpp.o
+
+open.i: open.cpp.i
+.PHONY : open.i
+
+# target to preprocess a source file
+open.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/open.dir/build.make CMakeFiles/open.dir/open.cpp.i
+.PHONY : open.cpp.i
+
+open.s: open.cpp.s
+.PHONY : open.s
+
+# target to generate assembly for a file
+open.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/open.dir/build.make CMakeFiles/open.dir/open.cpp.s
+.PHONY : open.cpp.s
 
 server.o: server.cpp.o
 .PHONY : server.o
@@ -244,11 +281,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... open"
 	@echo "... server"
 	@echo "... thread"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
+	@echo "... open.o"
+	@echo "... open.i"
+	@echo "... open.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

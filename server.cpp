@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include<cstring>
 #include <cerrno>
 #include <sys/select.h>
@@ -10,13 +11,12 @@
 #include <sys/socket.h>
 #include <filesystem>
 
-
 const int minFD = 0;
 namespace fs = std::filesystem;
 
 int main(){
 		std::vector<int> clients;
-		std::string path = fs::current_path();
+		std::string path = "/home/riccardo/c++_server";
 		int server_socket = socket(AF_INET, SOCK_STREAM,0);
 		sockaddr_in server;
 		server.sin_family = AF_INET;
@@ -49,7 +49,6 @@ int main(){
 				}
 				
 				int rc = select(maxFD + 1,&readFDs,nullptr,nullptr,nullptr);
-
 				if (rc < 0){
 						std::cerr << "Failed to select" << std::endl;
 				}
@@ -80,6 +79,7 @@ int main(){
 								if (bytes > 0){
 										std::string message(buffer.data(),bytes);
 										bool FileFound = false;	
+										
 										for (const auto & entry : fs::directory_iterator(path)){
 												if (message == entry.path().filename().string()){
 														FileFound = true;
@@ -88,8 +88,12 @@ int main(){
 										}	
 										if (FileFound){
 												std::cout<<"The file exists"<<std::endl;
-												std::string response ="The file exists\n" ;
-												send(client_fd,response.data(),response.size(),0);
+												std::string response(4096,'\0');
+												std::ifstream MyReadFile(message);
+												while((getline(MyReadFile,response))){
+														send(client_fd,response.data(),response.size(),0);	
+												}											
+												MyReadFile.close();
 										}
 										else{
 												std::cerr<<"File not found"<<std::endl;

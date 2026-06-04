@@ -6,5 +6,5 @@ project(SERVER_IN_CPP)
 add_executable(server server.cpp)
 add_executable(client client.cpp)
 add_executable(thread thread.cpp)
-
+add_executable(open open.cpp)
 
