@@ -24,6 +24,8 @@
 
 						std::string input;
 						std::getline(std::cin,input);
+						
+						
 	
 						send(client_socket,input.data(),input.size(),0);
 

@@ -133,8 +133,9 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
  /usr/include/c++/15/bits/locale_facets.tcc \
  /usr/include/c++/15/bits/basic_ios.tcc \
  /usr/include/c++/15/bits/ostream.tcc /usr/include/c++/15/istream \
- /usr/include/c++/15/bits/istream.tcc /usr/include/c++/15/ctime \
- /usr/include/c++/15/vector /usr/include/c++/15/bits/stl_uninitialized.h \
+ /usr/include/c++/15/bits/istream.tcc /usr/include/c++/15/cstring \
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/15/vector \
+ /usr/include/c++/15/bits/stl_uninitialized.h \
  /usr/include/c++/15/bits/stl_vector.h \
  /usr/include/c++/15/bits/stl_bvector.h \
  /usr/include/c++/15/bits/vector.tcc /usr/include/sys/time.h \
@@ -149,4 +150,26 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
  /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/bits/types/struct_osockaddr.h /usr/include/bits/in.h \
- /usr/include/netinet/ip.h
+ /usr/include/netinet/ip.h /usr/include/c++/15/filesystem \
+ /usr/include/c++/15/bits/fs_fwd.h /usr/include/c++/15/cstdint \
+ /usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-least.h \
+ /usr/include/c++/15/bits/chrono.h /usr/include/c++/15/ratio \
+ /usr/include/c++/15/limits /usr/include/c++/15/ctime \
+ /usr/include/c++/15/bits/parse_numbers.h \
+ /usr/include/c++/15/bits/fs_path.h /usr/include/c++/15/locale \
+ /usr/include/c++/15/bits/locale_facets_nonio.h \
+ /usr/include/c++/15/x86_64-redhat-linux/bits/time_members.h \
+ /usr/include/c++/15/x86_64-redhat-linux/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/15/bits/codecvt.h \
+ /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/15/bits/locale_conv.h /usr/include/c++/15/iomanip \
+ /usr/include/c++/15/bits/quoted_string.h /usr/include/c++/15/sstream \
+ /usr/include/c++/15/bits/sstream.tcc /usr/include/c++/15/codecvt \
+ /usr/include/c++/15/ext/concurrence.h \
+ /usr/include/c++/15/bits/shared_ptr.h \
+ /usr/include/c++/15/bits/shared_ptr_base.h \
+ /usr/include/c++/15/bits/allocated_ptr.h \
+ /usr/include/c++/15/bits/unique_ptr.h \
+ /usr/include/c++/15/ext/aligned_buffer.h \
+ /usr/include/c++/15/bits/fs_dir.h /usr/include/c++/15/bits/fs_ops.h
