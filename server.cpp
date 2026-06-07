@@ -12,6 +12,7 @@
 #include <netinet/ip.h>
 #include <sys/socket.h>
 #include <filesystem>
+#include <thread>
 
 const int minFD = 0;
 namespace fs = std::filesystem;
@@ -23,11 +24,15 @@ struct job{
 
 };
 auto readAndSendFile(int client_fd, std::string message){
+
+		std::cout << "Beginning client: " << client_fd << " on thread: " << std::this_thread::get_id() << std::endl;
 		std::string response;
 		std::ifstream MyReadFile(message);
+		std::this_thread::sleep_for(std::chrono::seconds(10));
 		while(getline(MyReadFile,response)){
 				send(client_fd,response.data(),response.size(),0);
 		}		
+		std::cout << "End thread: " << :: std::this_thread::get_id() << std::endl;
 }
 
 int main(){
@@ -123,7 +128,6 @@ int main(){
 														return j.client_fd == client_fd;		
 												});
 												bool PendingFile = (Pendingiterator != PendingFiles.end());
-
 												if (!PendingFile){
 														PendingFiles.push_back({
 																		client_fd,
