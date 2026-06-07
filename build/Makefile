@@ -175,6 +175,43 @@ open/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/open.dir/build.make CMakeFiles/open.dir/build
 .PHONY : open/fast
 
+#=============================================================================
+# Target rules for targets named async
+
+# Build rule for target.
+async: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 async
+.PHONY : async
+
+# fast build rule for target.
+async/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/async.dir/build.make CMakeFiles/async.dir/build
+.PHONY : async/fast
+
+async.o: async.cpp.o
+.PHONY : async.o
+
+# target to build an object file
+async.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/async.dir/build.make CMakeFiles/async.dir/async.cpp.o
+.PHONY : async.cpp.o
+
+async.i: async.cpp.i
+.PHONY : async.i
+
+# target to preprocess a source file
+async.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/async.dir/build.make CMakeFiles/async.dir/async.cpp.i
+.PHONY : async.cpp.i
+
+async.s: async.cpp.s
+.PHONY : async.s
+
+# target to generate assembly for a file
+async.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/async.dir/build.make CMakeFiles/async.dir/async.cpp.s
+.PHONY : async.cpp.s
+
 client.o: client.cpp.o
 .PHONY : client.o
 
@@ -280,10 +317,14 @@ help:
 	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... async"
 	@echo "... client"
 	@echo "... open"
 	@echo "... server"
 	@echo "... thread"
+	@echo "... async.o"
+	@echo "... async.i"
+	@echo "... async.s"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"

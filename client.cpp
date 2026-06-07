@@ -15,7 +15,13 @@ int main(){
 		while(1){
 				std::string input;
 				std::getline(std::cin,input);
-				send(client_socket,input.data(),input.size(),0);
+				if (input.size() > 0){
+						send(client_socket,input.data(),input.size(),0);
+				}
+				else{
+						std::cerr << "Invalid input" << std::endl;
+						continue;
+				}
 				std::string buffer(4096,'\0');	
 				ssize_t bytes = recv(client_socket,buffer.data(),buffer.size(),0);
 				if (bytes > 0){

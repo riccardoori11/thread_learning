@@ -1,8 +1,10 @@
 #include <iostream>
+#include <algorithm>
+#include <chrono>
+#include <future>
 #include <fstream>
 #include<cstring>
-#include <cerrno>
-#include <sys/select.h>
+#include <cerrno> 
 #include <vector>
 #include <sys/time.h>
 #include <unistd.h>
@@ -14,7 +16,23 @@
 const int minFD = 0;
 namespace fs = std::filesystem;
 
+// keep storage information about the client and the future
+struct job{
+		int client_fd;
+		std::future<void> future;
+
+};
+auto readAndSendFile(int client_fd, std::string message){
+		std::string response;
+		std::ifstream MyReadFile(message);
+		while(getline(MyReadFile,response)){
+				send(client_fd,response.data(),response.size(),0);
+		}		
+}
+
 int main(){
+		
+		std::vector<job> PendingFiles;
 		std::vector<int> clients;
 		std::string path = "/home/riccardo/c++_server";
 		int server_socket = socket(AF_INET, SOCK_STREAM,0);
@@ -34,15 +52,23 @@ int main(){
 				return 0;
 		}
 		while(1){
+
+				for (auto x =  PendingFiles.begin(); x != PendingFiles.end();){
+						auto status = x->future.wait_for(std::chrono::milliseconds(0));
+
+						if (status == std::future_status::ready){
+								x->future.get();	
+								x = PendingFiles.erase(x);
+						}
+						else{++x;}
+				}
+
 				fd_set readFDs;
 				FD_ZERO(&readFDs);
 				FD_SET(server_socket, &readFDs);
 				int maxFD = server_socket;
-
 				for (auto x: clients ){
-						
 						FD_SET(x,&readFDs);
-						
 						if (maxFD < x){
 								maxFD = x;
 						}
@@ -52,15 +78,22 @@ int main(){
 				if (rc < 0){
 						std::cerr << "Failed to select" << std::endl;
 				}
+			for (auto x =  PendingFiles.begin(); x != PendingFiles.end();){
+						auto status = x->future.wait_for(std::chrono::milliseconds(0));
+
+						if (status == std::future_status::ready){
+								x->future.get();	
+								x = PendingFiles.erase(x);
+						}
+						else{++x;}
+				}	
 				// check if server socket is ready
 				if (FD_ISSET(server_socket,&readFDs)){
 						int client_socket = accept(server_socket,(sockaddr*)&server,(socklen_t*)&addresslength);
-
 						if (client_socket > 0){
 								clients.push_back(client_socket);
 						}
 				}
-							
 				for (auto iterator = clients.begin(); iterator != clients.end(); ){
 						auto client_fd = *iterator;	
 						std::string buffer(4096,'\0');
@@ -79,7 +112,6 @@ int main(){
 								if (bytes > 0){
 										std::string message(buffer.data(),bytes);
 										bool FileFound = false;	
-										
 										for (const auto & entry : fs::directory_iterator(path)){
 												if (message == entry.path().filename().string()){
 														FileFound = true;
@@ -87,13 +119,16 @@ int main(){
 												}	
 										}	
 										if (FileFound){
-												std::cout<<"The file exists"<<std::endl;
-												std::string response(4096,'\0');
-												std::ifstream MyReadFile(message);
-												while((getline(MyReadFile,response))){
-														send(client_fd,response.data(),response.size(),0);	
-												}											
-												MyReadFile.close();
+												auto Pendingiterator = std::find_if(PendingFiles.begin(),PendingFiles.end(),[client_fd](const job& j){
+														return j.client_fd == client_fd;		
+												});
+												bool PendingFile = (Pendingiterator != PendingFiles.end());
+
+												if (!PendingFile){
+														PendingFiles.push_back({
+																		client_fd,
+																		std::async(std::launch::async,readAndSendFile,client_fd,message)});
+												}
 										}
 										else{
 												std::cerr<<"File not found"<<std::endl;

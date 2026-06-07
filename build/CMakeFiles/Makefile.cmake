@@ -58,4 +58,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/client.dir/DependInfo.cmake"
   "CMakeFiles/thread.dir/DependInfo.cmake"
   "CMakeFiles/open.dir/DependInfo.cmake"
+  "CMakeFiles/async.dir/DependInfo.cmake"
   )

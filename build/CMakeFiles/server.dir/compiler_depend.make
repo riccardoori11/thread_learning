@@ -91,11 +91,17 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/algorithm \
+  /usr/include/c++/15/atomic \
   /usr/include/c++/15/backward/binders.h \
   /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/algorithmfwd.h \
   /usr/include/c++/15/bits/alloc_traits.h \
   /usr/include/c++/15/bits/allocated_ptr.h \
   /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/atomic_base.h \
+  /usr/include/c++/15/bits/atomic_futex.h \
+  /usr/include/c++/15/bits/atomic_lockfree_defines.h \
   /usr/include/c++/15/bits/basic_ios.h \
   /usr/include/c++/15/bits/basic_ios.tcc \
   /usr/include/c++/15/bits/basic_string.h \
@@ -150,20 +156,28 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/bits/shared_ptr_base.h \
   /usr/include/c++/15/bits/sstream.tcc \
   /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_function.h \
+  /usr/include/c++/15/bits/std_mutex.h \
+  /usr/include/c++/15/bits/std_thread.h \
+  /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_heap.h \
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_tempbuf.h \
   /usr/include/c++/15/bits/stl_uninitialized.h \
   /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/uniform_int_dist.h \
+  /usr/include/c++/15/bits/unique_lock.h \
   /usr/include/c++/15/bits/unique_ptr.h \
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
@@ -172,9 +186,11 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/chrono \
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/codecvt \
   /usr/include/c++/15/concepts \
+  /usr/include/c++/15/condition_variable \
   /usr/include/c++/15/cstddef \
   /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
@@ -195,6 +211,7 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/ext/type_traits.h \
   /usr/include/c++/15/filesystem \
   /usr/include/c++/15/fstream \
+  /usr/include/c++/15/future \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/iomanip \
   /usr/include/c++/15/ios \
@@ -203,8 +220,11 @@ CMakeFiles/server.dir/server.cpp.o: /home/riccardo/c++_server/server.cpp \
   /usr/include/c++/15/istream \
   /usr/include/c++/15/limits \
   /usr/include/c++/15/locale \
+  /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/execution_defs.h \
+  /usr/include/c++/15/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
   /usr/include/c++/15/ratio \
   /usr/include/c++/15/sstream \
@@ -322,21 +342,25 @@ server: /lib64/ld-linux-x86-64.so.2 \
 
 /usr/include/sys/select.h:
 
-/usr/include/c++/15/bits/locale_facets.tcc:
+/usr/include/stdlib.h:
 
-/usr/include/c++/15/bits/locale_conv.h:
+/usr/include/stdc-predef.h:
 
-/usr/include/bits/waitflags.h:
+/usr/include/wctype.h:
 
-/usr/lib64/libc.so:
+/usr/include/sched.h:
 
-/usr/include/ctype.h:
+/usr/include/pthread.h:
 
-/usr/include/bits/types/locale_t.h:
+/usr/include/netinet/ip.h:
 
-/lib64/libm.so.6:
+/usr/include/locale.h:
 
-/usr/include/c++/15/bits/hash_bytes.h:
+/usr/include/linux/types.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/gnu/stubs.h:
 
 CMakeFiles/server.dir/server.cpp.o:
 
@@ -346,8 +370,6 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/ext/type_traits.h:
 
-/usr/include/c++/15/cstdlib:
-
 /usr/include/c++/15/bits/fs_path.h:
 
 /usr/include/c++/15/bits/shared_ptr.h:
@@ -356,13 +378,17 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/initializer_list:
 
+/usr/include/asm/bitsperlong.h:
+
 /usr/lib/gcc/x86_64-redhat-linux/15/libgcc_s.so:
 
 /usr/include/c++/15/bits/cxxabi_forced.h:
 
-/usr/include/asm/bitsperlong.h:
+/usr/include/c++/15/bits/atomic_lockfree_defines.h:
 
-/usr/include/pthread.h:
+/usr/include/c++/15/bits/memory_resource.h:
+
+/usr/include/c++/15/bits/algorithmfwd.h:
 
 /usr/include/c++/15/bits/basic_string.h:
 
@@ -372,17 +398,25 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/backward/binders.h:
 
+/usr/lib64/crti.o:
+
+/usr/include/stdio.h:
+
+/usr/include/bits/wordsize.h:
+
+/lib64/libm.so.6:
+
+/usr/include/c++/15/bits/hash_bytes.h:
+
+/usr/include/c++/15/algorithm:
+
+/usr/include/c++/15/bits/range_access.h:
+
 /usr/include/c++/15/bits/cpp_type_traits.h:
 
 /usr/include/bits/wctype-wchar.h:
 
 /usr/include/bits/timesize.h:
-
-/usr/include/bits/unistd_ext.h:
-
-/usr/include/c++/15/bits/locale_facets.h:
-
-/usr/include/bits/types/wint_t.h:
 
 /usr/include/bits/types/struct_timespec.h:
 
@@ -410,17 +444,27 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/bits/alloc_traits.h:
 
+/usr/include/bits/types/locale_t.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/c++/15/bits/locale_classes.h:
+
 /usr/include/c++/15/bits/charconv.h:
+
+/usr/include/c++/15/pstl/glue_algorithm_defs.h:
 
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/types/__fpos_t.h:
 
+/usr/include/bits/unistd_ext.h:
+
+/usr/include/c++/15/mutex:
+
 /usr/include/c++/15/bits/invoke.h:
-
-/usr/include/wctype.h:
-
-/usr/include/sched.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
@@ -429,8 +473,6 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/bits/time.h:
 
 /usr/include/bits/stdio_lim.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/ctype_inline.h:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -449,6 +491,12 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/bits/posix_opt.h:
 
 /usr/include/bits/locale.h:
+
+/usr/include/c++/15/bits/std_mutex.h:
+
+/usr/include/libintl.h:
+
+/usr/include/bits/endianness.h:
 
 /usr/include/bits/uintn-identity.h:
 
@@ -481,6 +529,8 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/15/bits/atomic_base.h:
 
 /home/riccardo/c++_server/server.cpp:
 
@@ -530,8 +580,6 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/asm-generic/posix_types.h:
 
-/usr/include/stdc-predef.h:
-
 /usr/include/c++/15/iomanip:
 
 /usr/include/asm/posix_types_64.h:
@@ -543,6 +591,16 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/c++/15/bits/unique_ptr.h:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/c++/15/bits/locale_conv.h:
+
+/usr/include/c++/15/bits/locale_facets.tcc:
+
+/usr/lib64/libc.so:
+
+/usr/include/ctype.h:
 
 /usr/include/bits/in.h:
 
@@ -558,19 +616,15 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h:
 
+/usr/include/c++/15/bits/atomic_futex.h:
+
 /usr/include/bits/types/struct_osockaddr.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
 
 /usr/include/c++/15/codecvt:
 
-/usr/include/gnu/stubs.h:
-
 /usr/include/bits/pthreadtypes.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/c++/15/bits/exception_defines.h:
 
 /usr/include/sys/single_threaded.h:
 
@@ -604,8 +658,6 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/bits/utility.h:
 
-/usr/include/linux/close_range.h:
-
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/15/streambuf:
@@ -624,6 +676,10 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/bits/streambuf_iterator.h:
 
+/usr/include/linux/posix_types.h:
+
+/usr/include/bits/types/FILE.h:
+
 /usr/include/features.h:
 
 /usr/include/bits/sched.h:
@@ -632,9 +688,13 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h:
 
-/usr/include/c++/15/bits/locale_facets_nonio.tcc:
+/usr/include/bits/types/wint_t.h:
 
-/usr/include/c++/15/bits/memory_resource.h:
+/usr/include/c++/15/bits/locale_facets.h:
+
+/usr/include/c++/15/cstdlib:
+
+/usr/include/c++/15/bits/locale_facets_nonio.tcc:
 
 /usr/include/linux/sched/types.h:
 
@@ -666,7 +726,9 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/ext/numeric_traits.h:
 
-/usr/include/c++/15/bits/range_access.h:
+/usr/include/c++/15/x86_64-redhat-linux/bits/ctype_inline.h:
+
+/usr/include/c++/15/future:
 
 /usr/include/c++/15/bits/stl_uninitialized.h:
 
@@ -682,6 +744,20 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/typeinfo:
 
+/usr/include/c++/15/concepts:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/c++/15/debug/assertions.h:
+
+/usr/include/c++/15/bits/std_thread.h:
+
+/usr/include/c++/15/bits/requires_hosted.h:
+
+/usr/include/c++/15/filesystem:
+
+/usr/include/c++/15/bits/stl_algo.h:
+
 /usr/include/c++/15/bits/stl_algobase.h:
 
 /usr/include/c++/15/clocale:
@@ -693,6 +769,12 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/c++/15/bits/ptr_traits.h:
 
 /usr/include/c++/15/bits/stl_construct.h:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/c++/15/bits/exception_defines.h:
+
+/usr/include/c++/15/bits/stl_heap.h:
 
 /usr/include/c++/15/bits/stl_iterator_base_funcs.h:
 
@@ -712,6 +794,8 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/cctype:
 
+/usr/include/c++/15/bits/stl_tempbuf.h:
+
 /usr/include/bits/types/struct_iovec.h:
 
 /usr/include/c++/15/cwctype:
@@ -720,9 +804,19 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/bits/string_view.tcc:
 
+/usr/include/c++/15/bits/uniform_int_dist.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/c++/15/bits/unique_lock.h:
+
 /usr/include/c++/15/bits/uses_allocator_args.h:
 
-/usr/include/c++/15/concepts:
+/usr/include/netinet/in.h:
+
+/usr/include/c++/15/cerrno:
+
+/usr/include/c++/15/chrono:
 
 /usr/include/c++/15/cstdint:
 
@@ -738,9 +832,9 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/ext/aligned_buffer.h:
 
-/usr/include/c++/15/ext/alloc_traits.h:
+/usr/include/c++/15/condition_variable:
 
-/usr/include/linux/types.h:
+/usr/include/c++/15/ext/alloc_traits.h:
 
 /usr/include/c++/15/bits/exception_ptr.h:
 
@@ -755,10 +849,6 @@ CMakeFiles/server.dir/server.cpp.o:
 /usr/include/c++/15/bits/stl_vector.h:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h:
-
-/usr/include/c++/15/bits/requires_hosted.h:
-
-/usr/include/c++/15/filesystem:
 
 /usr/include/c++/15/ios:
 
@@ -776,7 +866,17 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/new:
 
+/usr/include/strings.h:
+
+/usr/include/c++/15/bits/exception.h:
+
+/usr/include/c++/15/ostream:
+
+/usr/include/c++/15/pstl/execution_defs.h:
+
 /usr/include/c++/15/pstl/pstl_config.h:
+
+/usr/include/c++/15/atomic:
 
 /usr/include/c++/15/ratio:
 
@@ -796,15 +896,13 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/c++/15/bits/codecvt.h:
 
+/usr/include/c++/15/bits/std_function.h:
+
 /usr/include/c++/15/x86_64-redhat-linux/bits/c++locale.h:
 
 /usr/include/c++/15/bits/chrono.h:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/cpu_defines.h:
-
-/usr/include/c++/15/debug/assertions.h:
-
-/usr/include/sys/cdefs.h:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/messages_members.h:
 
@@ -822,42 +920,4 @@ CMakeFiles/server.dir/server.cpp.o:
 
 /usr/include/errno.h:
 
-/usr/include/features-time64.h:
-
 /usr/include/gnu/stubs-64.h:
-
-/usr/include/bits/endianness.h:
-
-/usr/include/libintl.h:
-
-/usr/include/bits/types/FILE.h:
-
-/usr/include/linux/posix_types.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h:
-
-/usr/include/c++/15/bits/locale_classes.h:
-
-/usr/include/linux/stddef.h:
-
-/usr/include/locale.h:
-
-/usr/include/c++/15/cerrno:
-
-/usr/include/netinet/in.h:
-
-/usr/include/netinet/ip.h:
-
-/usr/lib64/crti.o:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/stdio.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/c++/15/bits/exception.h:
-
-/usr/include/c++/15/ostream:
-
-/usr/include/strings.h:
